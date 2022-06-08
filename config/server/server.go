@@ -5,6 +5,7 @@ import (
 	docs "clientApi/docs"
 
 	"clientApi/config/env"
+	"clientApi/config/recovery"
 
 	"github.com/gin-gonic/gin"
 	swaggerfiles "github.com/swaggo/files"
@@ -16,7 +17,7 @@ func Init() *gin.Engine {
 	r := gin.New()
 
 	r.Use(gin.LoggerWithWriter(gin.DefaultWriter, "/"))
-
+	r.Use(gin.CustomRecovery(recovery.Filter))
 	api.Router(r)
 
 	// Configure Swagger

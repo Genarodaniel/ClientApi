@@ -10,7 +10,8 @@ import (
 )
 
 var (
-	GinMode string
+	GinMode  string
+	LogLevel string
 )
 
 func Load() {
@@ -21,5 +22,5 @@ func Load() {
 	}
 
 	GinMode = os.Getenv("GIN_MODE")
-
+	LogLevel = os.Getenv("LOG_LEVEL")
 }
