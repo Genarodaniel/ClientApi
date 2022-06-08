@@ -1,0 +1,12 @@
+info:
+  contact: {}
+  description: API responsible for managing Q2Bank
+  title: Swagger Hank API
+  version: "1.0"
+paths: {}
+securityDefinitions:
+  BearerAuth:
+    in: header
+    name: Authorization
+    type: apiKey
+swagger: "2.0"

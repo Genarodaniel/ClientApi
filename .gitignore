@@ -5,6 +5,14 @@
 *.so
 *.dylib
 
+### Visual Studio Code ###
+.vscode/
+.idea/
+.history/
+
+### Git ###
+.git/
+
 # Test binary, built with `go test -c`
 *.test
 
@@ -12,4 +20,19 @@
 *.out
 
 # Dependency directories (remove the comment below to include it)
-# vendor/
+vendor/
+debug/
+.DS_Store
+__debug_bin
+
+### Envs ###
+.env
+
+### Coverage ###
+cover.html
+fmtcoverage.html
+
+### Output Files ###
+*.out
+clientApi*
+
