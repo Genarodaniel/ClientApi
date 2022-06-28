@@ -42,9 +42,6 @@ $ go mod vendor
 ## Running
 
 Running application:
-``` bash
-$ make run
-```
 
 ``` bash
 $ go run main.go
