@@ -3,7 +3,9 @@ package server
 import (
 	"clientApi/api"
 	docs "clientApi/docs"
+	"fmt"
 
+	"clientApi/config/dependency"
 	"clientApi/config/env"
 	"clientApi/config/recovery"
 
@@ -13,6 +15,12 @@ import (
 )
 
 func Init() *gin.Engine {
+	env.Load()
+
+	if err := dependency.Load(); err != nil {
+		fmt.Println(err)
+	}
+
 	gin.SetMode(env.GinMode)
 	r := gin.New()
 
